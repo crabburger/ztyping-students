@@ -5717,7 +5717,7 @@ ig.module('game.main').requires('impact.game', 'impact.font', 'game.menus.about'
                 incEvery: 3
             }, {
                 type: EntityEnemyMine,
-                count: 15,
+                count: 6,
                 incEvery: 1
             }]
         }
