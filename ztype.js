@@ -3994,8 +3994,8 @@ ig.module('game.entities.enemy').requires('impact.entity', 'impact.font', 'game.
         health: 8,
         currentLetter: 0,
         targeted: false,
-        font: new ig.FontAvenirNext('media/fonts/avenir-44-white-v2.png'),
-        fontActive: new ig.FontAvenirNext('media/fonts/avenir-44-orange-v2.png'),
+        font: new ig.FontAvenirNext('media/fonts/avenir-22-white-v2.png'),
+        fontActive: new ig.FontAvenirNext('media/fonts/avenir-22-orange-v2.png'),
         speed: 10,
         friction: {
             x: 100,
