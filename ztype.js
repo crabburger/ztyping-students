@@ -5172,12 +5172,12 @@ ig.module('game.main').requires('impact.game', 'impact.font', 'game.menus.about'
         },
         nextWave: function() {
             this.wave.wave++;
-            this.wave.spawnWait = (this.wave.spawnWait * 0.97).limit(0.2, 1);
+            this.wave.spawnWait = (this.wave.spawnWait * 0.5).limit(0.2, 0.7);
             this.wave.currentSpawnWait = this.wave.spawnWait;
             this.wave.spawn = [];
             this.speedFactor *= this.wave.speedIncrease;
             if (ig.doc) {
-                for (var i = 0; i < 10 && this.wave.spawn.length < 2; i++) {
+                for (var i = 0; i < 10 && this.wave.spawn.length < 10; i++) {
                     this.nextDocFragment();
                 }
                 this.wave.spawn.reverse();
