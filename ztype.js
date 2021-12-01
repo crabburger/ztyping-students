@@ -2944,7 +2944,7 @@ ig.module('game.menus.interstitial').requires('game.menus.base').defines(functio
     MenuInterstitial = Menu.extend({
         itemClasses: [MenuItemSkip],
         scale: 0.75,
-        banner: new ig.Image(),
+        banner: new ig.Image('media/nfn-phoboslab-works.png'),
         init: function() {
             this.parent();
             this.y = (ig.system.height - 130) / this.scale;
