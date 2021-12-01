@@ -5704,7 +5704,7 @@ ig.module('game.main').requires('impact.game', 'impact.font', 'game.menus.about'
             fragment: 0,
             wave: 0,
             spawn: [],
-            spawnWait: 0.7,
+            spawnWait: 0.5,
             healthBoost: 0,
             speedIncrease: 1.01,
             types: [{
@@ -5717,7 +5717,7 @@ ig.module('game.main').requires('impact.game', 'impact.font', 'game.menus.about'
                 incEvery: 3
             }, {
                 type: EntityEnemyMine,
-                count: 6,
+                count: 12,
                 incEvery: 1
             }]
         }
