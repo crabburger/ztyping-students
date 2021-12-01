@@ -2944,7 +2944,7 @@ ig.module('game.menus.interstitial').requires('game.menus.base').defines(functio
     MenuInterstitial = Menu.extend({
         itemClasses: [MenuItemSkip],
         scale: 0.75,
-        banner: new ig.Image('media/nfn-phoboslab-works.png'),
+        banner: new ig.Image(),
         init: function() {
             this.parent();
             this.y = (ig.system.height - 130) / this.scale;
@@ -3430,7 +3430,7 @@ ig.module('game.menus.detailed-stats').requires('game.menus.base', 'game.xhr').d
                 ctx.fillStyle = '#555';
                 ctx.font = '28px sans-serif';
                 ctx.textAlign = 'center';
-                ctx.fillText('NO STATS FOUND – PLAY SOME MORE', width / 2, height / 2);
+                ctx.fillText('NO STATS FOUND Â– PLAY SOME MORE', width / 2, height / 2);
                 ctx.textAlign = 'left';
                 return;
             }
@@ -3532,7 +3532,7 @@ ig.module('game.menus.detailed-stats').requires('game.menus.base', 'game.xhr').d
             var ctx = offscreen.getContext('2d');
             ctx.fillStyle = '#ccc';
             ctx.font = '28px sans-serif';
-            ctx.fillText(' –  http://zty.pe/', 515, 38);
+            ctx.fillText(' Â–  http://zty.pe/', 515, 38);
             var png = offscreen.toDataURL('image/png');
             ig.xhr('backend/', {
                 saveScreenshot: true,
@@ -5135,8 +5135,8 @@ ig.module('game.main').requires('impact.game', 'impact.font', 'game.menus.about'
             this.setTitle();
             this.wordlist = ig.WORDS.EN;
             if (ig.doc) {
-                this.reAllWordCharacter = /^[a-zßàáâãäåæçèéêëìíîïğñòóôõöøùúûüı]+$/i;
-                this.reSplitNonWord = /[^0-9a-zßàáâãäåæçèéêëìíîïğñòóôõöøùúûüı]/i;
+                this.reAllWordCharacter = /^[a-zÃŸÃ Ã¡Ã¢Ã£Ã¤Ã¥Ã¦Ã§Ã¨Ã©ÃªÃ«Ã¬Ã­Ã®Ã¯Ã°Ã±Ã²Ã³Ã´ÃµÃ¶Ã¸Ã¹ÃºÃ»Ã¼Ã½]+$/i;
+                this.reSplitNonWord = /[^0-9a-zÃŸÃ Ã¡Ã¢Ã£Ã¤Ã¥Ã¦Ã§Ã¨Ã©ÃªÃ«Ã¬Ã­Ã®Ã¯Ã°Ã±Ã²Ã³Ã´ÃµÃ¶Ã¸Ã¹ÃºÃ»Ã¼Ã½]/i;
                 ig.doc.fastForwardScanAnimation();
             }
         },
@@ -5210,7 +5210,7 @@ ig.module('game.main').requires('impact.game', 'impact.font', 'game.menus.about'
                     type.count++;
                 }
             }
-            var words = fragment.text.replace(/['’‘’’]/g, '').split(this.reSplitNonWord);
+            var words = fragment.text.replace(/['Â’Â‘Â’Â’]/g, '').split(this.reSplitNonWord);
             var filteredWords = [];
             for (var i = 0; i < words.length; i++) {
                 var w = words[i].trim();
@@ -5293,36 +5293,36 @@ ig.module('game.main').requires('impact.game', 'impact.font', 'game.menus.about'
             }
         },
         _umlautTable: {
-            'ß': 's',
-            'à': 'a',
-            'á': 'a',
-            'â': 'a',
-            'ã': 'a',
-            'ä': 'a',
-            'å': 'a',
-            'æ': 'a',
-            'ç': 'c',
-            'è': 'e',
-            'é': 'e',
-            'ê': 'e',
-            'ë': 'e',
-            'ì': 'i',
-            'í': 'i',
-            'î': 'i',
-            'ï': 'i',
-            'ğ': 'd',
-            'ñ': 'n',
-            'ò': 'o',
-            'ó': 'o',
-            'ô': 'o',
-            'õ': 'o',
-            'ö': 'o',
-            'ø': 'o',
-            'ù': 'u',
-            'ú': 'u',
-            'û': 'u',
-            'ü': 'u',
-            'ı': 'y'
+            'ÃŸ': 's',
+            'Ã ': 'a',
+            'Ã¡': 'a',
+            'Ã¢': 'a',
+            'Ã£': 'a',
+            'Ã¤': 'a',
+            'Ã¥': 'a',
+            'Ã¦': 'a',
+            'Ã§': 'c',
+            'Ã¨': 'e',
+            'Ã©': 'e',
+            'Ãª': 'e',
+            'Ã«': 'e',
+            'Ã¬': 'i',
+            'Ã­': 'i',
+            'Ã®': 'i',
+            'Ã¯': 'i',
+            'Ã°': 'd',
+            'Ã±': 'n',
+            'Ã²': 'o',
+            'Ã³': 'o',
+            'Ã´': 'o',
+            'Ãµ': 'o',
+            'Ã¶': 'o',
+            'Ã¸': 'o',
+            'Ã¹': 'u',
+            'Ãº': 'u',
+            'Ã»': 'u',
+            'Ã¼': 'u',
+            'Ã½': 'y'
         },
         translateUmlaut: function(k) {
             if (ig.ua.mobile || (ig.doc && ig.doc.looksLikeEnglish)) {
