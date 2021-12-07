@@ -3251,7 +3251,7 @@ ig.baked = true;
 ig.module('game.menus.pause').requires('game.menus.base').defines(function() {
     MenuItemSoundVolume = MenuItem.extend({
         getText: function() {
-            return ' -  ' + (ig.soundManager.volume * 50).round() + '%  + ';
+            return ' -  ' + (ig.soundManager.volume * 100).round() + '%  + ';
         },
         left: function() {
             ig.soundManager.volume = (ig.soundManager.volume - 0.1).limit(0, 1);
@@ -3269,7 +3269,7 @@ ig.module('game.menus.pause').requires('game.menus.base').defines(function() {
     });
     MenuItemMusicVolume = MenuItem.extend({
         getText: function() {
-            return ' -  ' + (ig.music.volume * 50).round() + '%  + ';
+            return ' -  ' + (ig.music.volume * 100).round() + '%  + ';
         },
         left: function() {
             ig.music.volume = (ig.music.volume - 0.1).limit(0, 1);
