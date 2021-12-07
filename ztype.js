@@ -680,7 +680,7 @@ ig.module('impact.sound').defines(function() {
     "use strict";
     ig.SoundManager = ig.Class.extend({
         clips: {},
-        volume: 0.3,
+        volume: 1,
         format: null ,
         init: function() {
             if (!ig.Sound.enabled || !window.Audio) {
@@ -817,7 +817,7 @@ ig.module('impact.sound').defines(function() {
         currentTrack: null ,
         currentIndex: 0,
         random: false,
-        _volume: 0.5,
+        _volume: 1,
         _loop: true,
         _fadeInterval: 0,
         _fadeTimer: null ,
