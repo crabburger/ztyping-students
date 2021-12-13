@@ -2931,7 +2931,7 @@ ig.module('game.menus.about').requires('game.menus.base').defines(function() {
 });
 
 // lib/game/menus/interstitial.js
-/*ig.baked = true;
+ig.baked = true;
 ig.module('game.menus.interstitial').requires('game.menus.base').defines(function() {
     MenuItemSkip = MenuItem.extend({
         getText: function() {
@@ -3004,7 +3004,7 @@ ig.module('game.menus.interstitial').requires('game.menus.base').defines(functio
             }
         }
     });
-}); */
+}); 
 
 // lib/game/xhr.js
 ig.baked = true;
@@ -3173,7 +3173,7 @@ ig.module('game.menus.stats').requires('game.menus.base', 'game.xhr').defines(fu
 
 // lib/game/menus/game-over.js
 ig.baked = true;
-ig.module('game.menus.game-over').requires('game.menus.base', /*'game.menus.interstitial',*/ 'game.menus.stats').defines(function() {
+ig.module('game.menus.game-over').requires('game.menus.base', 'game.menus.interstitial', 'game.menus.stats').defines(function() {
     MenuItemInterstitial = MenuItem.extend({
         getText: function() {
             return 'back to title';
