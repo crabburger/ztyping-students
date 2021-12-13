@@ -2,4 +2,4 @@
 
 no sns, no ads, for elementary students learning abc and typing.
 
-Online game at <a href="zty.pe">zty.pe</a>
+Online game at <a href="http://zty.pe/" rel="nofollow">http://zty.pe/</a>
