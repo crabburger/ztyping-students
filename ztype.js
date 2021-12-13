@@ -3800,7 +3800,7 @@ ig.module('game.ease').defines(function() {
 
 // lib/game/menus/title.js
 ig.baked = true;
-ig.module('game.menus.title').requires('game.menus.base'/*, 'game.menus.detailed-stats'*/, 'game.ease').defines(function() {
+ig.module('game.menus.title').requires('game.menus.base'/*, 'game.menus.detailed-stats'*/, 'game.menus.settings', 'game.ease').defines(function() {
     MenuItemNormalMode = MenuItem.extend({
         getText: function() {
             return 'new game';
@@ -3808,6 +3808,14 @@ ig.module('game.menus.title').requires('game.menus.base'/*, 'game.menus.detailed
         ok: function() {
             ig.game.setGame();
         },
+    });
+    MenuItemSettingsMenu = MenuItem.extend({
+        getText: function () {
+            return "settings";
+        },
+        ok: function () {
+            ig.game.menu = new MenuSettings();
+        }
     });
     MenuItemOnlineVersion = MenuItem.extend({
         getText: function() {
@@ -3830,7 +3838,7 @@ ig.module('game.menus.title').requires('game.menus.base'/*, 'game.menus.detailed
         scale: 0.75,
         y: 0,
         init: function() {
-            this.itemClasses = [MenuItemNormalMode,MenuItemOnlineVersion,MenuItemAboutTrainer];
+            this.itemClasses = [MenuItemNormalMode,MenuItemSettingsMenu,MenuItemOnlineVersion,MenuItemAboutTrainer];
             
             this.parent();
             this.items[0].y = 740;
@@ -5245,7 +5253,7 @@ ig.module('game.words.en').defines(function() {
 
 // lib/game/main.js
 ig.baked = true;
-ig.module('game.main').requires('impact.game', 'impact.font', 'game.menus.about', 'game.menus.game-over', 'game.menus.pause', 'game.menus.title', 'game.entities.enemy-missle', 'game.entities.enemy-mine', 'game.entities.enemy-destroyer', 'game.entities.enemy-oppressor', 'game.entities.player', 'game.keyboard', 'game.xhr', 'game.ease', 'plugins.silent-loader', 'plugins.rise-loader', 'game.document-scanner', 'game.words.en').defines(function() {
+ig.module('game.main').requires('impact.game', 'impact.font', 'game.menus.about', 'game.menus.game-over', 'game.menus.settings', 'game.menus.pause', 'game.menus.title', 'game.entities.enemy-missle', 'game.entities.enemy-mine', 'game.entities.enemy-destroyer', 'game.entities.enemy-oppressor', 'game.entities.player', 'game.keyboard', 'game.xhr', 'game.ease', 'plugins.silent-loader', 'plugins.rise-loader', 'game.document-scanner', 'game.words.en').defines(function() {
     Number.zeroes = '000000000000';
     Number.prototype.zeroFill = function(d) {
         var s = this.toString();
