@@ -3006,7 +3006,7 @@ ig.module('game.menus.interstitial').requires('game.menus.base').defines(functio
     });
 }); 
 
-/*// lib/game/xhr.js
+// lib/game/xhr.js
 ig.baked = true;
 ig.module('game.xhr').defines(function() {
     ig.xhr = function(url, data, callback) {
@@ -3031,7 +3031,7 @@ ig.module('game.xhr').defines(function() {
         xhr.send(postString);
     }
     ;
-});*/
+});
 
 /*// lib/game/menus/stats.js
 ig.baked = true;
@@ -5041,7 +5041,7 @@ ig.module('game.words.en').defines(function() {
 
 // lib/game/main.js
 ig.baked = true;
-ig.module('game.main').requires('impact.game', 'impact.font', 'game.menus.about', 'game.menus.game-over', 'game.menus.pause', 'game.menus.title', 'game.entities.enemy-missle', 'game.entities.enemy-mine', 'game.entities.enemy-destroyer', 'game.entities.enemy-oppressor', 'game.entities.player', 'game.keyboard', /*'game.xhr', */'game.ease', 'plugins.silent-loader', 'plugins.rise-loader', 'game.document-scanner', 'game.words.en').defines(function() {
+ig.module('game.main').requires('impact.game', 'impact.font', 'game.menus.about', 'game.menus.game-over', 'game.menus.pause', 'game.menus.title', 'game.entities.enemy-missle', 'game.entities.enemy-mine', 'game.entities.enemy-destroyer', 'game.entities.enemy-oppressor', 'game.entities.player', 'game.keyboard', 'game.xhr', 'game.ease', 'plugins.silent-loader', 'plugins.rise-loader', 'game.document-scanner', 'game.words.en').defines(function() {
     Number.zeroes = '000000000000';
     Number.prototype.zeroFill = function(d) {
         var s = this.toString();
