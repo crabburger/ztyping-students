@@ -3596,7 +3596,7 @@ ig.module('game.ease').defines(function() {
 
 // lib/game/menus/title.js
 ig.baked = true;
-ig.module('game.menus.title').requires('game.menus.base', 'game.menus.detailed-stats', 'game.ease').defines(function() {
+ig.module('game.menus.title').requires('game.menus.base'/*, 'game.menus.detailed-stats'*/, 'game.ease').defines(function() {
     MenuItemNormalMode = MenuItem.extend({
         getText: function() {
             return 'new game';
