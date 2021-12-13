@@ -3328,7 +3328,7 @@ ig.module('game.menus.pause').requires('game.menus.base').defines(function() {
     });
 });
 
-// lib/game/menus/detailed-stats.js
+/*// lib/game/menus/detailed-stats.js
 ig.baked = true;
 ig.module('game.menus.detailed-stats').requires('game.menus.base', 'game.xhr').defines(function() {
     DetailedStats = ig.Class.extend({
@@ -3554,7 +3554,7 @@ ig.module('game.menus.detailed-stats').requires('game.menus.base', 'game.xhr').d
             });
         }
     });
-});
+});*/
 
 // lib/game/ease.js
 ig.baked = true;
