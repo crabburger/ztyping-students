@@ -3033,7 +3033,7 @@ ig.module('game.xhr').defines(function() {
     ;
 });
 
-/*// lib/game/menus/stats.js
+// lib/game/menus/stats.js
 ig.baked = true;
 ig.module('game.menus.stats').requires('game.menus.base', 'game.xhr').defines(function() {
     StatsView = ig.Class.extend({
@@ -3169,11 +3169,11 @@ ig.module('game.menus.stats').requires('game.menus.base', 'game.xhr').defines(fu
             }
         }
     });
-});*/
+});
 
 // lib/game/menus/game-over.js
 ig.baked = true;
-ig.module('game.menus.game-over').requires('game.menus.base', 'game.menus.interstitial'/*, 'game.menus.stats'*/).defines(function() {
+ig.module('game.menus.game-over').requires('game.menus.base', 'game.menus.interstitial', 'game.menus.stats').defines(function() {
     MenuItemInterstitial = MenuItem.extend({
         getText: function() {
             return 'back to title';
