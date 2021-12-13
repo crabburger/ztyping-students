@@ -2928,6 +2928,14 @@ ig.module('game.menus.about').requires('game.menus.base').defines(function() {
             this.parent();
         }
     });
+        MenuItemOnlineVersion = MenuItem.extend({
+        getText: function() {
+            return 'online version';
+        },
+        ok: function() {
+            window.location.href='http://zty.pe/';
+        },
+    });
 });
 
 // lib/game/menus/interstitial.js
