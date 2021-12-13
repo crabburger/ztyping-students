@@ -3817,20 +3817,12 @@ ig.module('game.menus.title').requires('game.menus.base'/*, 'game.menus.detailed
             ig.game.menu = new MenuSettings();
         }
     });
-    MenuItemOnlineVersion = MenuItem.extend({
-        getText: function() {
-            return '';
-        },
-        ok: function() {
-            window.location.href='';
-        },
-    });
     MenuTitle = Menu.extend({
         itemClasses: [],
         scale: 0.75,
         y: 0,
         init: function() {
-            this.itemClasses = [MenuItemNormalMode,MenuItemSettingsMenu,MenuItemOnlineVersion];
+            this.itemClasses = [MenuItemNormalMode,MenuItemSettingsMenu];
             
             this.parent();
             this.items[0].y = 740;
