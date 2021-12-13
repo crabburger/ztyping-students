@@ -3825,20 +3825,12 @@ ig.module('game.menus.title').requires('game.menus.base'/*, 'game.menus.detailed
             window.location.href='';
         },
     });
-    MenuItemAboutTrainer = MenuItem.extend({
-        getText: function() {
-            return '';
-        },
-        ok: function() {
-            window.location.href='';
-        },
-    });
     MenuTitle = Menu.extend({
         itemClasses: [],
         scale: 0.75,
         y: 0,
         init: function() {
-            this.itemClasses = [MenuItemNormalMode,MenuItemSettingsMenu,MenuItemOnlineVersion,MenuItemAboutTrainer];
+            this.itemClasses = [MenuItemNormalMode,MenuItemSettingsMenu,MenuItemOnlineVersion];
             
             this.parent();
             this.items[0].y = 740;
